@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "vending-machine"
+version = "0.1.0"
+description = ""
+authors = ["Witsanu <witsanum2543@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "vending_machine"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.1"
+pre-commit = "^3.0.1"
+tinydb = "^4.7.1"
+flask = "^2.2.2"
+jsonify = "^0.5"
+python-dotenv = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
