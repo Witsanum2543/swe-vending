@@ -1,60 +1,47 @@
-## How to use :
+## Vending Machine Manager
 
-1. run homework.py in terminal
-```bash
-python .\homework.py
-```
-2. url is "localhost:8080/"
-
-## Tech Stack :
-
-1. using Firebase for the database
-2. using Flask
+This application provides an easy-to-use platform for managing of vending machine.
+The application allows you to create and manage vending machine,
+view their information, and track stock of each machine.
 
 ## Installation
 
-installing pyrebase for Firebase API
-
+1. install [Poetry](https://python-poetry.org/docs/)
+2. Clone the repository
 ```bash
-pip install Pyrebase4
+git clone https://github.com/Witsanum2543/swe-vending.git
+```
+3. Install the dependencies inside project directory
+```bash
+poetry install
+```
+4. Create a .env file in the root directory of the project and set the following environment variables:
+```bash
+DB_PATH='./database/'
+TEST_DB_PATH='../database/'
+```
+5. run app.py in the root directory
+```bash
+python app.py
 ```
 
-## Usage (Available URL):
 
-1. "/create" (POST METHOD) - receive format as JSON raw <br/>
-     { <br/>
-        "name":"ven", <br/>
-        "location":"a", <br/> 
-        "items": {"orio":50, "water":10} <br/>
-     }
+## Usage (Supported APIs):
 
-2. "/deleteByName" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to delete
+| API URL                               | METHOD           | DESCRIPTION                 |
+|---------------------------------------|------------------|-----------------------------|
+| `/api/machine/create-machine`   | **POST**         | Create new vending machine. |
 
-3. "/changeName" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : oldName , VALUE : name of vending machine that want to change name <br/>
-    KEY : newName , VALUE : new name that want to assign to that vending machine
 
-4. "/changeLocation" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to change location <br/>
-    KEY : location , VALUE : new location that want to assign to that vending machine
+## Tests
 
-5. "/editItem" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to edit item <br/>
-    KEY : itemName , VALUE : name of an item that want to edit amount <br/>
-    KEY : amount , VALUE : new amount of that item
+This project using [pytest](https://docs.pytest.org/en/latest/) for testing
 
-6. "/addItem" (POST METHOD) - receive format as 'form-data' (can added new item that not exist or just add amount of existence item) <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to add item <br/>
-    KEY : itemName , VALUE : name of an item that want to add <br/>
-    KEY : amount , VALUE : amount of that item that want to add
+### How to Run Tests
 
-7. "/removeItem" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to remove item <br/>
-    KEY : itemName , VALUE : name of item that want to remove
+1. Make sure you have pytest installed, as listed in the `pyproject.toml` file or run `poetry install`
+2. Run the command `pytest -v` in project's root directory to execute all test.
 
-8. "/getByName" (POST METHOD) - receive format as 'form-data' <br/>
-    KEY : vendingName , VALUE : name of vending machine that want to get information <br/>
+### Test Coverage
 
-9. "/getAll" (GET METHOD) <br/>
-    return : JSON format of all vending machine information
+To measure the test coverage, run the command `pytest --cov=app` in the terminal. This will show you the percentage of the codebase that is covered by tests.
