@@ -38,6 +38,22 @@ class VendingMachineService:
             )
         return existing_machine[0]
 
+    def get_all_vending_machine_info(self: "VendingMachineService") -> [dict]:
+        """
+        Retrieves all of a vending machine information in the database.
+
+        Parameters:
+            None
+
+        Raises:
+            ValueError: If vending machine with the given name does not exist.
+
+        Returns:
+            List[dict]: A List of dictionary containing the information of every vending machine in the database.
+        """
+        all_machine = self.db.all()
+        return all_machine
+
     def create_new_vending_machine(
         self: "VendingMachineService", vending_machine_name: str, location: str
     ) -> dict:
@@ -90,7 +106,7 @@ class VendingMachineService:
                 f"Vending machine with name '{vending_machine_name}' does not exists."
             )
         self.db.remove(Query().name == vending_machine_name)
-        return "Success"
+        return "Successfully, delete vending machine"
 
     def change_vending_machine_name(
         self: "VendingMachineService",
