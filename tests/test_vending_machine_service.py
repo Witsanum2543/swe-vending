@@ -1,5 +1,4 @@
 import os
-import sys
 import types
 
 from dotenv import load_dotenv
@@ -7,7 +6,6 @@ from dotenv import load_dotenv
 from database.db_manager import get_test_db
 from services import vending_machine_service
 
-sys.path.append("..")
 load_dotenv()
 
 db = None
@@ -86,7 +84,7 @@ def test_remove_vending_machine_item() -> None:
 def test_delete_vending_machine_by_name() -> None:
     vending_machine_name = "ven2"
     message = machine_service.delete_vending_machine_by_name(vending_machine_name)
-    assert message == "Success"
+    assert message == "Successfully, delete vending machine"
 
 
 def teardown_module(module: types.ModuleType) -> None:
