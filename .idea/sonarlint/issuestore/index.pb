@@ -9,10 +9,6 @@ F
 database/db_manager.py,2\0\2029f409084806e72da8f7437f57e36b166f671e
 4
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
-;
-poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
->
-pyproject.toml,5\d\5d07e7d72637aa0d59c89d381fe6dc4cf46e2491
 6
 app.py,1\3\13cce7fd076299c81b4986166f3d822791c9490e
 U
