@@ -20,12 +20,8 @@ G
 .pre-commit-config.yaml,e\7\e7d14d429f898757a423156de0e8c49d75240694
 R
 ".github/workflows/python-tests.yml,e\9\e917c7a1acef149c48724bffc3c116280232a0f3
-7
-tox.ini,6\1\61be067c7cf3bdbf8a6b021a2b5167eb30612d0c
 ;
 poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
-H
-sonar-project.properties,2\5\2538046035efb77ecc44e1fd2eec1e2641594d4c
 T
 $routes/api/vending_machine_routes.py,5\2\5217fd0107b6dce95a93f7a06dc37a20f9fc6229
 9
