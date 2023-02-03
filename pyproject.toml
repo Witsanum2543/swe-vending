@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Witsanu <witsanum2543@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "vending_machine"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
