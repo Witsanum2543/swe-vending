@@ -1,5 +1,7 @@
 from tinydb import Query, TinyDB
 
+""
+
 
 class VendingMachineService:
     def __init__(self: "VendingMachineService", db: TinyDB) -> None:
