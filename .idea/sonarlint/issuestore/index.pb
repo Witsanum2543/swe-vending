@@ -18,3 +18,5 @@ T
 $routes/api/vending_machine_routes.py,5\2\5217fd0107b6dce95a93f7a06dc37a20f9fc6229
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+S
+#services/vending_machine_service.py,8\0\805b13355abe999fe2664da02d7327550dd8eaa3
